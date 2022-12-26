@@ -1,0 +1,685 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 9000px;
+    font-family:Arial, Helvetica, sans-serif; 
+}
+.parent{
+    width: 100%;
+    height: 45px;
+    background-color: rgba(77, 77, 77, 0.1);
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.img1{
+    width: 100px;
+    height: 45px;
+    float: left;
+    margin-left: 150px;
+}
+ul{
+    list-style: none;
+    font-size: 15px;
+    float: right;
+    margin: 10px 150px 0 0;
+}
+.li1{
+    display: inline-block;
+    margin-left: 30px;
+}
+.li1 a{
+    text-decoration: none;
+    color: rgb(189, 13, 13);
+    font-size: 18px;
+}
+.home{
+    background-image: url(../images/ddd.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+}
+.home-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+.home-content{
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%) ;
+    text-align: center;
+}
+.home-title1{
+    color: #fff;
+    font-size: 65px;
+    font-style: italic;
+}
+.home-p{
+    color: #fff;
+    letter-spacing: 2px;
+    margin: 15px 0px;
+}
+.btn{
+    width: 150px;
+    padding: 15px 0px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.btn-learn{
+    background-color: blue;
+    color: #fff;
+    margin-left: 10px;
+}
+.btn:hover{
+    opacity: 0.5;
+}
+.about-header{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 130px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.about-line{
+    width: 70px;
+    height: 4px;
+    background-color: rgb(53, 118, 215);
+    margin: 18px auto;
+}
+.about-container{
+    width: 80%;
+    height: 450px;
+    margin: auto;
+}
+.about-content{
+    overflow: auto;
+    margin-top: 60px;
+}
+.about-item{
+    position: relative;
+    border: 1px solid gray;
+    width: 28%;
+    height: 180px;
+    float: left;
+    padding: 19px 16px;
+    text-align: center;
+}
+.mg{
+    margin: 0px 45px;
+}
+.about-item i{
+    font-size: 30px;
+    color: rgb(63, 166, 226);
+    margin-top: 10px;
+}
+.info-title{
+    font-size: 30px;
+    margin: 15px 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.info-p{
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: rgb(167, 165, 165);
+}
+.info-link{
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(118, 186, 227);
+    line-height: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.about-item:after{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px; 
+    top: 0;
+    left:0;
+    background-color: rgb(16, 16, 16);
+    opacity: 0;
+}
+.about-item:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    transition: 0.5s;
+    z-index: -1;
+}
+.about-item:hover{
+    color: #fff;
+}
+.portfolio-parent{
+  background-color: rgba(193, 193, 193, 0.504);
+  padding: 100px 0px; 
+}
+.portfolio-title{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 140px;
+}
+.portfolio-line{
+    width: 60px;
+    height: 4px;
+    background-color: rgb(74, 126, 198);
+    margin: 15px auto; 
+}
+.portfolio-container{
+    width: 80%;
+    margin: auto;
+}
+.portfolio-content1{
+    overflow: auto;
+    margin-top: 50px; 
+}
+.portfolio-item{
+    width: 28%;
+    float: left;
+    padding: 19px 16px;
+    text-align: center;
+    position: relative;
+}
+.ff{
+    margin: 0px 49px;
+}
+.item-image{
+    width: 90%;
+    margin: auto;
+}
+.item-image img{
+    width: 100%;
+    height: 300px;
+}
+.item-data{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   visibility: hidden;
+   opacity: 0;
+}
+.portfolio-item:hover .item-data{
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+}
+.data-title{
+    color: rgb(69, 122, 191);
+    font-size: 18px;
+}
+.data-p{
+    color: #fff;
+    font-size: 22px;
+    transition-delay: 0.4s;
+}
+.item-data i{
+    line-height: 60px;
+    font-size: 20px;
+}
+.item-data a {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(0, 183, 255);
+    padding: 10px 6px;
+    transition-delay: 0.6s;
+}
+.portfolio-item:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgba(0, 0, 0);
+    opacity: 0;
+}
+.portfolio-item:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    transition: 1s;
+}
+.cc{
+    margin: 0px 49px;
+}
+.offer-header{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 140px;
+}
+.offer-line{
+    width: 60px;
+    height: 4px;
+    background-color: rgb(74, 126, 198);
+    margin: 15px auto;
+}
+.offer-container{
+    width: 80%;
+    margin: auto;
+    height: 450px;
+}
+.offer-content1{
+    overflow: auto;
+    margin: 50px 0px;
+}
+.offer-item{
+    border: 1px solid gray;
+    width: 27%;
+    height: 130px;
+    float: left;
+    padding: 20px 17px;
+    position: relative;
+}
+.ss{
+    margin: 0px 60px;
+}
+.offer-item-icon{
+  position: absolute;
+  left: 15px;
+  top: 26px;
+  color: #6195ff;
+  font-size: 30px;
+}    
+.offer-title{
+  text-transform: capitalize;
+  margin: 8px  0px 15px 50px;
+}
+.offer-p{
+    text-transform: capitalize;
+    margin:8px  0px 15px 50px ;
+    color: #999;
+}
+.offer-item:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgb(16, 16, 16);
+    opacity: 0;
+}
+.offer-item:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    transition: 0.5s;
+    z-index: -1;
+}
+.offer-item:hover{
+    color: #fff;
+}
+.choose-parent{
+    background-color: rgba(233, 230, 230, 0.504);
+    padding: 140px 0px; 
+    margin-top: 20px;
+    height: 450px; 
+}
+.choose-container{
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+.choose-header{
+    font-size: 30px;
+}
+.choose-line{
+    width: 60px;
+    height: 4px;
+    background-color: #4079ea;
+    margin-top: 15px;
+}
+.choose-p{
+  font-size: 20px;
+  color: #999;
+  margin-top: 50px;
+}
+.choose-list{
+    margin-right:72%;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.choose-list li{
+    margin-top: 10px;
+    color: rgb(163, 163, 163);
+}
+.choose-list li i{
+    width: 18px;
+    height: 18px;
+    border-radius:50%;
+    border: 0.5px solid rgb(96, 170, 232);
+    color: #3e77ea;  
+}
+.choose-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 400px;
+    background-color: rgb(160, 157, 157);
+    margin-right: 100px;  
+}
+.choose-img img{
+    width: 81%;
+    height: 400px;
+    margin: 0px 43px; 
+}
+.choose-polits li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+   border: 0.5px solid gray;
+    display: inline-block;
+    margin-top: 115px;
+    margin-left: 10px;
+}
+.choose-polits li:hover{
+    background-color: #4079ea;
+}
+.choose-polits .polits1{
+    background-color:#4079ea
+}
+.numbers-parent{
+    width: 100%;
+    height: 400px;
+    background-image: url(../images/What-is-Android-Developer.jpg);
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.numbers-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0,0.7);
+}
+.numbers-container{
+    width: 80%;
+    margin: auto;
+}
+.numbers-item{
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin-top: 150px;
+    color: #fff;
+}
+.numbers-title{
+    font-size: 30px;
+    margin-top: 10px;
+}
+.numbers-item i{
+    font-size: 30px;
+    color: #5aacdf;
+    margin-bottom: 10px;
+}
+.pricing-parent{
+    background-color: rgb(228, 228, 228);
+    padding: 120px 0px;
+}
+.pricing-header{
+    font-size: 35px;
+    text-align: center;
+}
+.pricing-line{
+    width: 60px;
+    height: 4px;
+    background-color: #6195ff;
+    margin: auto;
+    margin-top: 10px;
+}
+.pricing-container{
+    width: 80%;
+    margin: auto;
+}
+.pricing-content{
+    overflow: auto;
+    margin-top: 50px;
+}
+.pricing-item{
+    border: 1px solid gray;
+    width: 30%;
+    height: 300px;
+    text-align: center;
+    padding: 30px 0px;
+    float: left;
+    position: relative;
+}
+.pricing-item-title{
+    font-size: 18px;
+    color: rgba(151, 145, 145, 0.64);
+    margin: 15px 0px;
+}
+.pricing-item-circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid rgb(57, 130, 225);
+    margin: auto;
+}
+.pricing-circle-title{
+    font-size: 28px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+    font-style: italic;
+}
+.pricing-item-p{
+    color: rgba(151, 145, 145, 0.64);
+    margin-top: 40px;
+    letter-spacing: 1px;  
+}
+.pricing-item-btn{
+    width: 130px;
+    height: 30px;
+    border: 3px solid black;
+    color:  white;
+    background-color: black;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+.aa{
+    margin: 0px 55px;
+}
+.pricing-item:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color:#0b0c0c;
+    opacity: 0;
+}
+.pricing-item:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.pricing-item:hover .pricing-item-title{
+    color: brown;
+}
+.pricing-item:hover .pricing-circle-title{
+    color: brown;
+}
+.who{
+    height: 300px;
+    background-image: url(../images/Khalifa-stadium-small-970x546.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.who-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.who-content{
+    width: 84%;
+    height: 200px;
+    margin: 0 auto;
+    padding-top: 74px;
+}
+.who-det{
+    width: 49%;
+    height: 100%;
+    float: left;
+    padding-left: 8px;
+}
+.who-det img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.who-det .sp{
+  color: #2196f3;
+}
+.img p{
+    margin: 0 30px;
+    font-size: x-large;
+    color: white;
+    float: left;
+    padding-top: 30px;
+}
+.who-p{
+    margin: 25px 20px 0px 0px;
+    color: white;
+    float: left;
+}
+.team-title{
+    font-size: 40px;
+    text-align: center;
+    padding: 110px 0px 0px 0px;
+}
+.team-line{
+    width: 60px;
+    height: 4px;
+    background-color: rgb(61, 135, 226);
+    margin: auto;
+    margin-top: 20px;
+}
+.container {
+    width: 80%;
+    height: 400px;
+    margin: auto;
+}
+.team-content {
+    margin-top: 60px;
+}
+.team-item {
+    float: left;
+    background-color: rgb(211, 210, 210);
+    width: 28%;
+    padding: 18px  16px;
+    text-align: center;
+    position: relative;
+}
+.ch {
+    margin: 0px  4%;
+}
+.team-img {
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+.team-img  img {
+    width: 100%;
+}
+.team-overlay {
+    position: absolute;
+     top: 0; 
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: black ;
+    opacity: 0.5;   
+    visibility: hidden ;
+    opacity: 0 ;
+}
+.team-item:hover  .team-overlay {
+    visibility: visible ;
+    opacity: 0.5 ;
+}
+.team-overlay i {
+    display: block;
+    line-height: 40px  ;
+}
+.team-overlay  a {
+    display: block;
+    width:40px;
+    height: 40px;
+    background-color: rgb(0, 183, 255);
+    color: #fff;
+    margin-left: auto ;
+}
+.team-info-title {
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 15px 0px;
+}
+.team-info-sp {
+    text-transform: uppercase ;
+    color: #999;   
+}
+.team-item:after {
+     content: "";
+     position: absolute;
+     width:100%;
+     height: 0;
+     top : 0 ;
+     left : 0 ;
+     background-color: rgba(48, 44, 44, 0.5);
+     opacity: 0 ;
+}
+.team-item:hover::after {
+    width:100%;
+    height: 100%;
+    transition: 2s ;
+    opacity:0.6;
+}
+.team-item:before {
+    content: "";
+    position: absolute;
+    width:0 ;
+    height: 0  ;
+    bottom  : 0 ;
+    right : 0 ;
+    background-color: rgba(48, 44, 44, 0.5);
+    opacity:0 ;
+}
+.team-item:hover::before {
+   width:100%;
+   height: 100%;
+   transition: 2s ;
+   opacity: 0.6 ;
+}
+.team-item:hover .team-info-title{
+    color: #fff;
+}
+.team-item:hover .team-info-sp {
+    color: blue;
+}
